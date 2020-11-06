@@ -28,6 +28,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/devextreme/dist/css/dx.common.css",
+              "node_modules/devextreme/dist/css/dx.material.lime.light.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-akita-tasks"
+    }
+  },
+  "defaultProject": "angular-akita-tasks",
+  "cli": {
+    "analytics": "e5047e6f-2fe1-4162-8ae6-9a06269c383f"
+  }
 }
