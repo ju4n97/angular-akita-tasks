@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Tasks</h1>
+
+  <div id="tasks">
+    <dx-data-grid [dataSource]="tasks" [remoteOperations]="true">
+      <dxo-editing
+        mode="row"
+        [allowAdding]="true"
+        [allowUpdating]="true"
+        [allowDeleting]="true"
+      ></dxo-editing>
+
+      <dxo-paging [pageSize]="2"></dxo-paging>
+
+      <dxo-filter-row [visible]="true"></dxo-filter-row>
+      <dxo-header-filter [visible]="true"></dxo-header-filter>
+      <dxo-search-panel [visible]="true"></dxo-search-panel>
+
+      <dxo-export [enabled]="true"></dxo-export>
+
+      <dxi-column dataField="name">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="description">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+      </dxi-column>
+      <dxi-column dataField="completed"> </dxi-column>
+      <dxi-column dataField="createdAt" [allowEditing]="false">
+        <dxo-form-item [visible]="false"> </dxo-form-item>
+      </dxi-column>
+      <dxi-column dataField="updatedAt" [allowEditing]="false">
+        <dxo-form-item [visible]="false"> </dxo-form-item>
+      </dxi-column>
+    </dx-data-grid>
+  </div>
+</div>
