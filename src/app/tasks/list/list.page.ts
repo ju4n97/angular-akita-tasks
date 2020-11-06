@@ -47,24 +47,4 @@ export class ListPage implements OnInit {
         await this.taskService.delete(id).toPromise(),
     });
   }
-
-  getById(id: string): void {
-    this.taskService.get(id, { mapResponseFn: (res) => res.data }).subscribe();
-  }
-
-  onRowInserted(e): void {
-    const { data } = e;
-    this.taskService.add(data).subscribe();
-  }
-
-  onRowUpdated(e): void {
-    console.log(e);
-    // const { key, data } = e;
-    // this.taskService.update(key, data).subscribe();
-  }
-
-  onRowRemoved(e): void {
-    const { key } = e;
-    this.taskService.delete(key).subscribe();
-  }
 }
